@@ -1,100 +1,217 @@
-import Image from "next/image";
+import Profile from "./components/Profile";
+import Section from "./components/Section";
+import Item from "./components/Item";
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)] bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <ThemeToggle />
+      <main className="flex flex-col gap-12 max-w-4xl mx-auto">
+        <Profile />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Section title="Education">
+          <Item
+            title="Dankook University"
+            subtitle="Department of Computer Engineering, GPA: 3.56/4.5"
+            rightContent={{
+              top: "Yongin, South Korea",
+              bottom: "2019 - Present"
+            }}
+            color="blue"
+          />
+
+          <Item
+            title="Salesio High School"
+            subtitle=""
+            rightContent={{
+              top: "Gwangju, South Korea",
+              bottom: "2016 - 2019"
+            }}
+            color="blue"
+          />
+        </Section>
+        <Section title="Career">
+          <Item
+            title="InterMinds"
+            subtitle="R&D, Vision AI & Frontend"
+            rightContent={{
+              top: "Sungnam, South Korea",
+              bottom: "2022.05 - 2024.08"
+            }}
+            color="green"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
+              <li>Key achievement and responsibility 1</li>
+              <li>Key achievement and responsibility 2</li>
+            </ul>
+          </Item>
+        </Section>
+
+        <Section title="Skills">
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Frontend</h3>
+              <div className="flex flex-wrap gap-2">
+                <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" className="h-5" />
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" className="h-5" />
+                <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" className="h-5" />
+                <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte" className="h-5" />
+                <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" className="h-5" />
+                <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" className="h-5" />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Backend</h3>
+              <div className="flex flex-wrap gap-2">
+                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" className="h-5" />
+
+                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" className="h-5" />
+                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" className="h-5" />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Deep Learning</h3>
+              <div className="flex flex-wrap gap-2">
+                <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" className="h-5" />
+                <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" className="h-5" />
+                <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" className="h-5" />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Others</h3>
+              <div className="flex flex-wrap gap-2">
+                <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white" alt="Kafka" className="h-5" />
+                <img src="https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white" alt="MQTT" className="h-5" />
+                <img src="https://img.shields.io/badge/gRPC-4285F4?style=for-the-badge&logo=grpc&logoColor=white" alt="gRPC" className="h-5" />
+                <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" className="h-5" />
+              </div>
+            </div>
+          </div>
+        </Section>
+
+
+
+        <Section title="Projects">
+
+          <Item
+            title="UWB, Pose 기반 IoT 제어 인터페이스, MALIBU"
+            subtitle="캡스톤 디자인"
+            rightContent={{
+              top: "",
+              bottom: "2023.11.26"
+            }}
+            color="red"
           >
-            Read our docs
-          </a>
-        </div>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+          </Item>
+
+          <Item
+            title="반응형 디자인 QR기반 테이블 오더, QoRder"
+            subtitle="토이 프로젝트"
+            rightContent={{
+              top: "",
+              bottom: "2023.11.26"
+            }}
+            color="red"
+          >
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+
+          </Item>
+          <Item
+            title="Pose Annotation Viewer, Banana"
+            subtitle=""
+            rightContent={{
+              top: "",
+              bottom: "2023.11.26"
+            }}
+            color="red"
+          >
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+
+          </Item>
+        </Section>
+
+
+
+        <Section title="Awards">
+          <Item
+            title="Furiosa AI Hackathon"
+            subtitle="우수상, Furiosa AI"
+            rightContent={{
+              top: "",
+              bottom: "2023.11.26"
+            }}
+            color="yellow"
+          >
+            <p className="text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, "아잉"</p>
+          </Item>
+
+          <Item
+            title="2024년 캡스톤 페스티벌"
+            subtitle="우수상, SW중심대학사업단장"
+            rightContent={{
+              top: "",
+              bottom: "2024.11.28"
+            }}
+            color="yellow"
+          >
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, "MALIBU"</p>
+          </Item>
+
+          <Item
+            title="2024년 캡스톤디자인(종합설계) 경진대회"
+            subtitle="동상, 단국대학교 공학교육혁신센터장"
+            rightContent={{
+              top: "",
+              bottom: "2024.12.09"
+            }}
+            color="yellow"
+          >
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, "MALIBU"</p>
+          </Item>
+        </Section>
+        <Section title="License & Language">
+          <Item
+            title="정보처리기사"
+            subtitle="한국산업인력공단"
+            rightContent={{
+              top: "",
+              bottom: "2024.09.10"
+            }}
+            color="purple"
+          />
+          <Item
+            title="TOEIC"
+            subtitle="ETS"
+            rightContent={{
+              top: "Score: 875/990",
+              bottom: "2025.01.12"
+            }}
+            color="purple"
+          />
+          <Item
+            title="TOEIC Speaking"
+            subtitle="ETS"
+            rightContent={{
+              top: "Score: 160(AL)",
+              bottom: "2025.03.09"
+            }}
+            color="purple"
+          />
+
+        </Section>
+
+
+
+
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="mt-12 text-center text-gray-600 dark:text-gray-400">
+        <p>© 2024 Mingyun Jeong. All rights reserved.</p>
       </footer>
     </div>
   );
