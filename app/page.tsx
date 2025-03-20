@@ -2,6 +2,7 @@ import Profile from "./components/Profile";
 import Section from "./components/Section";
 import Item from "./components/Item";
 import ThemeToggle from "./components/ThemeToggle";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -53,41 +54,169 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-2">Frontend</h3>
               <div className="flex flex-wrap gap-2">
-                <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" className="h-5" />
-                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" className="h-5" />
-                <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" className="h-5" />
-                <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte" className="h-5" />
-                <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" className="h-5" />
-                <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" className="h-5" />
+                <Image
+                  src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
+                  alt="Next.js"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                  alt="JavaScript"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"
+                  alt="Vite"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white"
+                  alt="Svelte"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+                  alt="TypeScript"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                  alt="Tailwind CSS"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
               </div>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-2">Backend</h3>
               <div className="flex flex-wrap gap-2">
-                <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" className="h-5" />
+                <Image
+                  src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+                  alt="Flask"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
 
-                <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" className="h-5" />
-                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" className="h-5" />
+                <Image
+                  src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white"
+                  alt="FastAPI"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+                  alt="Docker"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
               </div>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-2">Deep Learning</h3>
               <div className="flex flex-wrap gap-2">
-                <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" className="h-5" />
-                <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" className="h-5" />
-                <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" className="h-5" />
+                <Image
+                  src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"
+                  alt="OpenCV"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
+                  alt="PyTorch"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+                  alt="TensorFlow"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
               </div>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-2">Others</h3>
               <div className="flex flex-wrap gap-2">
-                <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white" alt="Kafka" className="h-5" />
-                <img src="https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white" alt="MQTT" className="h-5" />
-                <img src="https://img.shields.io/badge/gRPC-4285F4?style=for-the-badge&logo=grpc&logoColor=white" alt="gRPC" className="h-5" />
-                <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" className="h-5" />
+                <Image
+                  src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white"
+                  alt="Kafka"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white"
+                  alt="MQTT"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/gRPC-4285F4?style=for-the-badge&logo=grpc&logoColor=white"
+                  alt="gRPC"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
+                <Image
+                  src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
+                  alt="MongoDB"
+                  width={100}
+                  height={20}
+                  className="h-5 w-auto"
+                  style={{ width: 'auto' }}
+                  unoptimized
+                />
               </div>
             </div>
           </div>
@@ -147,7 +276,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, "아잉"</p>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, &ldquo;아잉&rdquo;</p>
           </Item>
 
           <Item
@@ -159,7 +288,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, "MALIBU"</p>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
           </Item>
 
           <Item
@@ -171,7 +300,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, "MALIBU"</p>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
           </Item>
         </Section>
         <Section title="License & Language">
