@@ -43,8 +43,8 @@ export default function Home() {
             color="green"
           >
             <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Key achievement and responsibility 1</li>
-              <li>Key achievement and responsibility 2</li>
+              <li>Vision AI 기반 무인매장 솔루션, StorePOP</li>
+              <li>(주)오리온 제품 검출, 분류 모델 개발, OSAS</li>
             </ul>
           </Item>
         </Section>
