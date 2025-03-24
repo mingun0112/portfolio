@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Profile() {
     return (
-        <div className="flex items-center gap-16">
+        <div className="flex items-center flex-col gap-5 md:flex-row md:gap-16">
             <div className="flex-shrink-0">
-                <div className="rounded-full overflow-hidden w-48 h-48 relative">
+                <div className="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48 relative">
                     <Image
                         className="absolute -top-5 object-cover"
                         src="/suit.jpeg"

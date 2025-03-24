@@ -42,7 +42,7 @@ export default function Home() {
             }}
             color="green"
           >
-            <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
+            <ul className="md:block hidden list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
               <li>Vision AI 기반 무인매장 솔루션, StorePOP</li>
               <li>(주)오리온 제품 검출, 분류 모델 개발, OSAS</li>
             </ul>
@@ -231,11 +231,11 @@ export default function Home() {
             subtitle="캡스톤 디자인"
             rightContent={{
               top: "",
-              bottom: "2023.11.26"
+              bottom: "2024.06"
             }}
             color="red"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
           </Item>
 
           <Item
@@ -243,14 +243,14 @@ export default function Home() {
             subtitle="토이 프로젝트"
             rightContent={{
               top: "",
-              bottom: "2023.11.26"
+              bottom: "2023.11"
             }}
             color="red"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
 
           </Item>
-          <Item
+          {/* <Item
             title="Pose Annotation Viewer, Banana"
             subtitle=""
             rightContent={{
@@ -259,7 +259,20 @@ export default function Home() {
             }}
             color="red"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Custom dataset annotation 검수툴</p>
+
+          </Item> */}
+
+          <Item
+            title="질병 조기진단을 위한 딥러닝 기반의 헬스케어 시스템 기술 연구"
+            subtitle=""
+            rightContent={{
+              top: "",
+              bottom: "2021.07"
+            }}
+            color="red"
+          >
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">탈모 조기 진단을 위한 딥러닝 기반 모발 검출 연구과제</p>
 
           </Item>
         </Section>
@@ -268,16 +281,17 @@ export default function Home() {
 
         <Section title="Awards">
           <Item
-            title="Furiosa AI Hackathon"
-            subtitle="우수상, Furiosa AI"
+            title="2024년 캡스톤디자인(종합설계) 경진대회"
+            subtitle="동상, 단국대학교 공학교육혁신센터장"
             rightContent={{
               top: "",
-              bottom: "2023.11.26"
+              bottom: "2024.12.09"
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, &ldquo;아잉&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
           </Item>
+
 
           <Item
             title="2024년 캡스톤 페스티벌"
@@ -288,22 +302,45 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
           </Item>
-
           <Item
-            title="2024년 캡스톤디자인(종합설계) 경진대회"
-            subtitle="동상, 단국대학교 공학교육혁신센터장"
+            title="Furiosa AI Hackathon"
+            subtitle="우수상, Furiosa AI"
             rightContent={{
               top: "",
-              bottom: "2024.12.09"
+              bottom: "2023.11.26"
             }}
             color="yellow"
           >
-            <p className="text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, &ldquo;아잉&rdquo;</p>
           </Item>
+
+
         </Section>
         <Section title="License & Language">
+          <Item
+            title="TOEIC Speaking"
+            subtitle="ETS"
+            rightContent={{
+              top: "Score: 160(AL)",
+              bottom: "2025.03.09"
+            }}
+            color="purple"
+          >
+            <p className="md:hidden block text-gray-700 dark:text-gray-300 ">Score: 160(AL)</p>
+          </Item>
+          <Item
+            title="TOEIC"
+            subtitle="ETS"
+            rightContent={{
+              top: "Score: 875/990",
+              bottom: "2025.01.12"
+            }}
+            color="purple"
+          >
+            <p className="md:hidden block text-gray-700 dark:text-gray-300">Score: 875/990</p>
+          </Item>
           <Item
             title="정보처리기사"
             subtitle="한국산업인력공단"
@@ -313,24 +350,9 @@ export default function Home() {
             }}
             color="purple"
           />
-          <Item
-            title="TOEIC"
-            subtitle="ETS"
-            rightContent={{
-              top: "Score: 875/990",
-              bottom: "2025.01.12"
-            }}
-            color="purple"
-          />
-          <Item
-            title="TOEIC Speaking"
-            subtitle="ETS"
-            rightContent={{
-              top: "Score: 160(AL)",
-              bottom: "2025.03.09"
-            }}
-            color="purple"
-          />
+
+
+
 
         </Section>
 
