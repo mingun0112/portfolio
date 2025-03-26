@@ -249,7 +249,7 @@ export default function Home() {
             }}
             color="red"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">QR코드 테이블 오더 및 주문 시스템</p>
 
           </Item>
           {/* <Item
