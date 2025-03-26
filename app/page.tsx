@@ -45,6 +45,8 @@ export default function Home() {
             <ul className="md:block hidden list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
               <li>Vision AI 기반 무인매장 솔루션, StorePOP</li>
               <li>(주)오리온 제품 검출, 분류 모델 개발, OSAS</li>
+              <li>StorePop 키오스크 개발</li>
+              <li>CU 광주아시아문화전당점 대시보드 개발</li>
             </ul>
           </Item>
         </Section>
