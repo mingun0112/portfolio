@@ -364,7 +364,7 @@ export default function Home() {
       </main>
 
       <footer className="mt-12 text-center text-gray-600 dark:text-gray-400">
-        <p>© 2024 Mingyun Jeong. All rights reserved.</p>
+        <p>© 2025 Mingyun Jeong. All rights reserved.</p>
       </footer>
     </div>
   );
