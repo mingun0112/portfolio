@@ -51,6 +51,33 @@ export default function Home() {
           </Item>
         </Section>
 
+        <div className="grid grid-cols-3 gap-4">
+          <div className="relative aspect-[9/16]">
+            <Image
+              src="/kiosk1.png"
+              alt="StorePOP"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="relative aspect-[9/16]">
+            <Image
+              src="/kiosk2.png"
+              alt="OSAS"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="relative aspect-[9/16]">
+            <Image
+              src="/kiosk3.png"
+              alt="Dashboard"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
         <Section title="Skills">
           <div className="space-y-4">
             <div>
@@ -224,10 +251,7 @@ export default function Home() {
           </div>
         </Section>
 
-
-
         <Section title="Projects">
-
           <Item
             title="UWB, Pose 기반 IoT 제어 인터페이스, MALIBU"
             subtitle="캡스톤 디자인"
@@ -239,6 +263,34 @@ export default function Home() {
           >
             <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
           </Item>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-[400px]">
+              <Image
+                src="/malibu.png"
+                alt="malibu report pdf"
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <div className="grid grid-rows-2 gap-4">
+              <div className="relative">
+                <Image
+                  src="/malibu1.jpg"
+                  alt="malibu report pdf"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              <div className="relative">
+                <Image
+                  src="/malibu2.png"
+                  alt="malibu report pdf"
+                  fill
+                  className="absolute object-cover rounded-lg -top-32"
+                />
+              </div>
+            </div>
+          </div>
 
           <Item
             title="반응형 디자인 QR기반 테이블 오더, QoRder"
@@ -250,8 +302,35 @@ export default function Home() {
             color="red"
           >
             <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">QR코드 테이블 오더 및 주문 시스템</p>
-
           </Item>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-[400px]">
+              <Image
+                src="/qr2.png"
+                alt="QoRder Mobile"
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <div className="grid grid-rows-2 gap-4">
+              <div className="relative h-[190px]">
+                <Image
+                  src="/qr4.png"
+                  alt="QoRder Desktop"
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+              <div className="relative h-[190px]">
+                <Image
+                  src="/qr3.png"
+                  alt="QoRder Menu"
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
           {/* <Item
             title="Pose Annotation Viewer, Banana"
             subtitle=""
@@ -279,8 +358,6 @@ export default function Home() {
           </Item>
         </Section>
 
-
-
         <Section title="Awards">
           <Item
             title="2024년 캡스톤디자인(종합설계) 경진대회"
@@ -294,10 +371,9 @@ export default function Home() {
             <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
           </Item>
 
-
           <Item
             title="2024년 캡스톤 페스티벌"
-            subtitle="우수상, SW중심대학사업단장"
+            subtitle="최우수상, SW중심대학사업단장"
             rightContent={{
               top: "",
               bottom: "2024.11.28"
@@ -317,8 +393,6 @@ export default function Home() {
           >
             <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, &ldquo;아잉&rdquo;</p>
           </Item>
-
-
         </Section>
         <Section title="License & Language">
           <Item
@@ -352,15 +426,7 @@ export default function Home() {
             }}
             color="purple"
           />
-
-
-
-
         </Section>
-
-
-
-
       </main>
 
       <footer className="mt-12 text-center text-gray-600 dark:text-gray-400">
