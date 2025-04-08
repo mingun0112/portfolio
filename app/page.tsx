@@ -384,7 +384,7 @@ export default function Home() {
           </Item>
           <Item
             title="Furiosa AI Hackathon"
-            subtitle="우수상, Furiosa AI"
+            subtitle="Excellence Award, Furiosa AI"
             rightContent={{
               top: "",
               bottom: "2023.11.26"
