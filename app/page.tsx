@@ -345,7 +345,7 @@ export default function Home() {
           </Item> */}
 
           <Item
-            title="질병 조기진단을 위한 딥러닝 기반의 헬스케어 시스템 기술 연구"
+            title="Deep Learning-Based Healthcare System Technology Research for Early Disease Diagnosis"
             subtitle=""
             rightContent={{
               top: "",
@@ -360,8 +360,8 @@ export default function Home() {
 
         <Section title="Awards">
           <Item
-            title="2024년 캡스톤디자인(종합설계) 경진대회"
-            subtitle="동상, 단국대학교 공학교육혁신센터장"
+            title="2024 Capstone Design (Comprehensive Design) Competition"
+            subtitle="Bronze Medal, Director of the Engineering Education Innovation Center at Dankook University"
             rightContent={{
               top: "",
               bottom: "2024.12.09"
@@ -372,8 +372,8 @@ export default function Home() {
           </Item>
 
           <Item
-            title="2024년 캡스톤 페스티벌"
-            subtitle="최우수상, SW중심대학사업단장"
+            title="2024 Capstone Festival"
+            subtitle="Grand Prize, Head of the SW-Centered University at Dankook University"
             rightContent={{
               top: "",
               bottom: "2024.11.28"
