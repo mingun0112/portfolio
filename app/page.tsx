@@ -253,8 +253,8 @@ export default function Home() {
 
         <Section title="Projects">
           <Item
-            title="UWB, Pose 기반 IoT 제어 인터페이스, MALIBU"
-            subtitle="캡스톤 디자인"
+            title="UWB and Pose-Based IoT Control Interface, MALIBU"
+            subtitle="Capstone design"
             rightContent={{
               top: "",
               bottom: "2024.06"
@@ -293,8 +293,8 @@ export default function Home() {
           </div>
 
           <Item
-            title="반응형 디자인 QR기반 테이블 오더, QoRder"
-            subtitle="토이 프로젝트"
+            title="Responsive Design QR-Based Table Order, QoRder"
+            subtitle="Toy project"
             rightContent={{
               top: "",
               bottom: "2023.11"
