@@ -20,6 +20,7 @@ export default function Profile() {
                 <div className="flex flex-col gap-2">
                     <div className="text-2xl font-bold text-gray-900 dark:text-white">Mingyun Jeong</div>
                     <div className="text-lg text-gray-600 dark:text-gray-300">Computer Vision & Frontend Developer</div>
+                    <div className="text-m text-gray-600 dark:text-gray-300">https://portfolio-mingun0112s-projects.vercel.app/</div>
                     <div className="flex gap-4">
                         <Link href="/sample.pdf" className="text-blue-600 dark:text-blue-400 hover:underline">
                             CV
