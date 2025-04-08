@@ -43,10 +43,10 @@ export default function Home() {
             color="green"
           >
             <ul className="md:block hidden list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Vision AI 기반 무인매장 솔루션, StorePOP</li>
-              <li>(주)오리온 제품 검출, 분류 모델 개발, OSAS</li>
-              <li>StorePop 키오스크 개발</li>
-              <li>CU 광주아시아문화전당점 대시보드 개발</li>
+              <li>Vision AI-based unmaned store, StorePOP</li>
+              <li>Product detection and classification model for Orion, OSAS</li>
+              <li>Development of StorePop kiosk</li>
+              <li>Dashboard for CU Gwangju Asia Culture Center branch</li>
             </ul>
           </Item>
         </Section>
@@ -301,7 +301,7 @@ export default function Home() {
             }}
             color="red"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">QR코드 테이블 오더 및 주문 시스템</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">QR table ordering system, Qorder</p>
           </Item>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-[400px]">
@@ -353,7 +353,7 @@ export default function Home() {
             }}
             color="red"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">탈모 조기 진단을 위한 딥러닝 기반 모발 검출 연구과제</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Deep Learning-Based Hair Detection Research Project for Early Diagnosis of Hair Loss</p>
 
           </Item>
         </Section>
@@ -368,7 +368,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose based IoT control interface, &ldquo;MALIBU&rdquo;</p>
           </Item>
 
           <Item
@@ -380,7 +380,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose 기반 IoT 제어 인터페이스, &ldquo;MALIBU&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose based IoT control interface, &ldquo;MALIBU&rdquo;</p>
           </Item>
           <Item
             title="Furiosa AI Hackathon"
@@ -391,7 +391,7 @@ export default function Home() {
             }}
             color="yellow"
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Furiosa AI NPU를 활용한 시선 추적 자동 국어 문제 프로그램, &ldquo;아잉&rdquo;</p>
+            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Eye-Tracking Automated Korean Language Question Program Using Furiosa AI NPU, &ldquo;Eying&rdquo;</p>
           </Item>
         </Section>
         <Section title="License & Language">
