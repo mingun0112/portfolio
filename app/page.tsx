@@ -373,7 +373,7 @@ export default function Home() {
 
           <Item
             title="2024 Capstone Festival"
-            subtitle="Grand Prize, Head of the SW-Centered University at Dankook University"
+            subtitle="Best Award, Head of the SW-Centered University at Dankook University"
             rightContent={{
               top: "",
               bottom: "2024.11.28"
