@@ -3,7 +3,22 @@ import Section from "./components/Section";
 import Item from "./components/Item";
 import ThemeToggle from "./components/ThemeToggle";
 import Image from "next/image";
-
+// <Item
+//     title="InterMinds"
+//     subtitle="R&D(산업기능요원), Vision AI Engineer"
+//     rightContent={{
+//         top: "Sungnam, South Korea",
+//         bottom: "2022.05 - 2024.08"
+//     }}
+//     color="green"
+//     imageList={[
+//         "/interminds1.png",
+//         "/kiosk2.png",
+//     ]}
+//     techStack={[
+//     ]
+//     }
+// >
 export default function Home() {
   return (
     <div className="min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)] bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -32,51 +47,115 @@ export default function Home() {
             color="blue"
           />
         </Section>
-        <Section title="Career">
-          <Item
-            title="InterMinds"
-            subtitle="R&D, Vision AI & Frontend"
-            rightContent={{
-              top: "Sungnam, South Korea",
-              bottom: "2022.05 - 2024.08"
-            }}
-            color="green"
-          >
-            <ul className="md:block hidden list-disc list-inside mt-2 text-gray-700 dark:text-gray-300">
-              <li>Vision AI-based unmaned store, StorePOP</li>
-              <li>Product detection and classification model for Orion, OSAS</li>
-              <li>Development of StorePop kiosk</li>
-              <li>Dashboard for CU Gwangju Asia Culture Center branch</li>
-            </ul>
-          </Item>
-        </Section>
+          <Section title="Career">
+              <Item
+                  title="InterMinds"
+                  subtitle="R&D(산업기능요원), Vision AI Engineer"
+                  rightContent={{
+                      top: "Sungnam, South Korea",
+                      bottom: "2022.05 - 2024.08"
+                  }}
+                  color="green"
+                  imageList={[
+                      "/interminds1.png",
+                      "/kiosk2.png",
+                  ]}
+                  techStack={[
+                  ]
+                  }
+              >
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      딥러닝 기반 무인 매장내 고객 행동 및 동선 분석 - (주)BGF리테일, 한국인터넷진흥원, 한국후지쯔
+                  </p>
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      비전 AI 무인 매장 키오스크 솔루션 개발
+                  </p>
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      오리온 BI 프로젝트(제품 점유율 분석) - (주)오리온, 카카오엔터프라이즈
+                  </p>
+              </Item>
+              <Item
+                  title="학부연구생, MLPA LAB"
+                  subtitle="논문 세미나 및 딥러닝 연구"
+                  rightContent={{ top: "Dankook University", bottom: "2021.03 - 2022.01" }}
+                  color="green"
+                  imageList={[
+                      "/mlpa.png",
+                      "/mlpa2.webp",
+                  ]}
+                  techStack={[
+                  ]
+                  }
+              >
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      질병 조기 진단을 위한 딥러닝 기반 헬스케어 연구 보조
+                  </p>
+              </Item>
+          </Section>
+          <Section title="Certification">
+              <Item
+                  title="현대오토에버 모빌리티 SW 스쿨 2기(스마트팩토리)"
+                  subtitle=""
+                  rightContent={{
+                      top: "K-Digital Education",
+                      bottom: "2025.05 ~"
+                  }}
+                  color="green"
+                  imageList={[
+                      "/cps.png",
+                      "/phm.png",
+                  ]}
+                  techStack={[
+                  ]
+                  }
 
-        <div className="grid grid-cols-3 gap-4">
-          <div className="relative aspect-[9/16]">
-            <Image
-              src="/kiosk1.png"
-              alt="StorePOP"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative aspect-[9/16]">
-            <Image
-              src="/kiosk2.png"
-              alt="OSAS"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative aspect-[9/16]">
-            <Image
-              src="/kiosk3.png"
-              alt="Dashboard"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-        </div>
+              >
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      CPS Project - S-prodis를 활용한 공정 시뮬레이션 및 UPH 개선
+
+                  </p>
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+
+                      PHM Project - 진동 데이터 분석을 통한 베어링 결함 탐지
+                  </p>
+              </Item>
+              <Item
+                  title="수도권 ICT 이노베이션 스퀘어, 컴퓨터비전 고급 과정"
+                  subtitle=""
+                  rightContent={{
+                      top: "ICT Innovation Square",
+                      bottom: "2025.03 - 2025.05"
+                  }}
+                  color="green"
+                  imageList={[
+                      "/innovation1.png",
+                      "/innovation2.png",
+                  ]}
+                  techStack={[
+                  ]
+                  }
+              ></Item>
+              <Item
+                  title="네이버 커넥트 재단, AI BASIC boost"
+                  subtitle=""
+                  rightContent={{
+                      top: "Naver Connect Foundation",
+                      bottom: "2022.01 - 2022.02"
+                  }}
+                  color="green"
+                  imageList={[
+                      "/naver1.png",
+
+                  ]}
+                  techStack={[
+                  ]
+                  }
+              ></Item>
+
+          </Section>
+
+
+
 
         <Section title="Skills">
           <div className="space-y-4">
@@ -252,85 +331,83 @@ export default function Home() {
         </Section>
 
         <Section title="Projects">
-          <Item
-            title="UWB and Pose-Based IoT Control Interface, MALIBU"
-            subtitle="Capstone design"
-            rightContent={{
-              top: "",
-              bottom: "2024.06"
-            }}
-            color="red"
-          >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB based IoT 3D positioning & 3D pose estimation</p>
-          </Item>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-[400px]">
-              <Image
-                src="/malibu.png"
-                alt="malibu report pdf"
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
-            <div className="grid grid-rows-2 gap-4">
-              <div className="relative">
-                <Image
-                  src="/malibu1.jpg"
-                  alt="malibu report pdf"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <div className="relative">
-                <Image
-                  src="/malibu2.png"
-                  alt="malibu report pdf"
-                  fill
-                  className="absolute object-cover rounded-lg -top-32"
-                />
-              </div>
-            </div>
-          </div>
 
           <Item
-            title="Responsive Design QR-Based Table Order, QoRder"
-            subtitle="Toy project"
-            rightContent={{
-              top: "",
-              bottom: "2023.11"
-            }}
-            color="red"
+              title="지도 기반 SNS 웹앱, UnoffiMap"
+              subtitle=""
+              rightContent={{ top: "Capstone Project", bottom: "2025.03 - 2025.07" }}
+              color="blue"
+              imageList={[
+                "/unoffi1.png",
+                "/unoffi2.jpeg",
+
+              ]}
+              techStack={[
+                  {name: "Spring Boot", badgeSrc: "https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=pytorch&logoColor=white"},
+                  {name:"Next" ,badgeSrc: "https://img.shields.io/badge/nextJS-000000?style=for-the-badge&logo=python&logoColor=white"},
+                {name:"postgresql", badgeSrc:"https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white"},
+                  {name:"docker", badgeSrc:"https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white"},
+
+              ]
+              }
           >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">QR table ordering system, Qorder</p>
+            <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+              UWB based IoT 3D positioning & 3D pose estimation
+            </p>
           </Item>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-[400px]">
-              <Image
-                src="/qr2.png"
-                alt="QoRder Mobile"
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
-            <div className="grid grid-rows-2 gap-4">
-              <div className="relative h-[190px]">
-                <Image
-                  src="/qr4.png"
-                  alt="QoRder Desktop"
-                  fill
-                  className="object-contain rounded-lg"
-                />
-              </div>
-              <div className="relative h-[190px]">
-                <Image
-                  src="/qr3.png"
-                  alt="QoRder Menu"
-                  fill
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+
+
+          <Item
+              title="UWB and Pose-Based IoT Control Interface, MALIBU"
+              subtitle=""
+              rightContent={{ top: "Capstone Project", bottom: "2024.06 - 2024.12" }}
+              color="blue"
+              imageList={[
+                "/malibu.png",
+                "/malibu1.jpg",
+                "/malibu2.png"
+              ]}
+              techStack={[
+                {name: "pytorch", badgeSrc: "https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
+                },
+                {name:"Python" ,badgeSrc: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"},
+                {name:"c++", badgeSrc:"https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white"},
+                  {name: "mqtt", badgeSrc: "https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white"}
+
+              ]
+              }
+          >
+            <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+              UWB based IoT 3D positioning & 3D pose estimation
+            </p>
+          </Item>
+
+          <Item
+              title="QoRder"
+              subtitle="QR 기반 테이블 주문 시스템"
+              rightContent={{ top: "Capstone Project", bottom: "2024.03 - 2024.06" }}
+              color="blue"
+              imageList={[
+                "/qr2.png",
+                "/qr4.png",
+                "/qr3.png"
+              ]}
+              techStack={[
+                {name: "svelte", badgeSrc:"https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white"},
+                {name:"fastapi" ,badgeSrc: "https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white"},
+                {name:"MongoDB", badgeSrc: "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"},
+                {name:"Python" ,badgeSrc: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"},
+                {name:"Python" ,badgeSrc: "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"},
+
+              ]
+              }
+          >
+            <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+              QR 기반 테이블 주문과 실시간 주문 현황 확인이 가능한 시스템입니다.
+            </p>
+          </Item>
+
+
           {/* <Item
             title="Pose Annotation Viewer, Banana"
             subtitle=""
@@ -344,18 +421,7 @@ export default function Home() {
 
           </Item> */}
 
-          <Item
-            title="Deep Learning-Based Healthcare System Technology Research for Early Disease Diagnosis"
-            subtitle=""
-            rightContent={{
-              top: "",
-              bottom: "2021.07"
-            }}
-            color="red"
-          >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Deep Learning-Based Hair Detection Research Project for Early Diagnosis of Hair Loss</p>
 
-          </Item>
         </Section>
 
         <Section title="Awards">
