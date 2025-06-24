@@ -134,7 +134,12 @@ export default function Home() {
                   techStack={[
                   ]
                   }
-              ></Item>
+
+              >
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      Yolo 모델 학습 및 시각화 웹 페이지 개발
+                  </p>
+              </Item>
               <Item
                   title="네이버 커넥트 재단, AI BASIC boost"
                   subtitle=""
@@ -333,8 +338,8 @@ export default function Home() {
         <Section title="Projects">
 
           <Item
-              title="지도 기반 SNS 웹앱, UnoffiMap"
-              subtitle=""
+              title="UnoffiMap"
+              subtitle="지도 기반 SNS 웹앱"
               rightContent={{ top: "Capstone Project", bottom: "2025.03 - 2025.07" }}
               color="blue"
               imageList={[
