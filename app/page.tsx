@@ -137,7 +137,7 @@ export default function Home() {
 
               >
                   <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
-                      Yolo 모델 학습 및 시각화 웹 페이지 개발
+                      CNN 부터 ViT까지 컴퓨터비전 심화 이론 학습, Yolo 모델 학습 및 시각화 웹 페이지 개발
                   </p>
               </Item>
               <Item
@@ -155,7 +155,11 @@ export default function Home() {
                   techStack={[
                   ]
                   }
-              ></Item>
+              >
+                  <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                      딥러닝 기초 이론 교육
+                  </p>
+              </Item>
 
           </Section>
 
@@ -349,7 +353,7 @@ export default function Home() {
               ]}
               techStack={[
                   {name: "Spring Boot", badgeSrc: "https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=pytorch&logoColor=white"},
-                  {name:"Next" ,badgeSrc: "https://img.shields.io/badge/nextJS-000000?style=for-the-badge&logo=python&logoColor=white"},
+                  {name:"Next" ,badgeSrc: "https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"},
                 {name:"postgresql", badgeSrc:"https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white"},
                   {name:"docker", badgeSrc:"https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white"},
 
@@ -357,7 +361,7 @@ export default function Home() {
               }
           >
             <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
-              UWB based IoT 3D positioning & 3D pose estimation
+
             </p>
           </Item>
 
@@ -430,40 +434,75 @@ export default function Home() {
         </Section>
 
         <Section title="Awards">
-          <Item
-            title="2024 Capstone Design (Comprehensive Design) Competition"
-            subtitle="Bronze Medal, Director of the Engineering Education Innovation Center at Dankook University"
-            rightContent={{
-              top: "",
-              bottom: "2024.12.09"
-            }}
-            color="yellow"
-          >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose based IoT control interface, &ldquo;MALIBU&rdquo;</p>
-          </Item>
+            <Item
+                title="2024 캡스톤 페스티벌, 2024 캡스톤 디자인(종합 설계) 경진대회"
+                subtitle="최우수상(단국대학교 SW중심사업단), 동상(단국대학교 공학교육혁신센터)"
+                rightContent={{ top: "", bottom: "2024.11.28 - 2024.12.09" }}
+                color="yellow"
+                imageList={[
+                    "/award1.jpeg",
+                    "/award2.png",
+
+                ]}
+                techStack={[
+                    {name: "pytorch", badgeSrc: "https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
+                    },
+                    {name:"Python" ,badgeSrc: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"},
+                    {name:"c++", badgeSrc:"https://img.shields.io/badge/C++-00599C?style=flat-square&logo=C%2B%2B&logoColor=white"},
+                    {name: "mqtt", badgeSrc: "https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white"}
+
+                ]
+                }
+            >
+                <p className="text-sm mt-2 text-gray-700 dark:text-gray-200">
+                    MALIBU 프로젝트를 경진대회에 출품하여 포스터와 함께 발표하여 수상했습니다.
+                </p>
+            </Item>
 
           <Item
-            title="2024 Capstone Festival"
-            subtitle="Best Award, Head of the SW-Centered University at Dankook University"
-            rightContent={{
-              top: "",
-              bottom: "2024.11.28"
-            }}
-            color="yellow"
-          >
-            <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">UWB, Pose based IoT control interface, &ldquo;MALIBU&rdquo;</p>
-          </Item>
-          <Item
             title="Furiosa AI Hackathon"
-            subtitle="Excellence Award, Furiosa AI"
+            subtitle="우수상, Furiosa AI"
             rightContent={{
               top: "",
               bottom: "2023.11.26"
             }}
+            techStack={[
+                {name: "Spring Boot", badgeSrc: "https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=pytorch&logoColor=white"},
+                {name:"Next" ,badgeSrc: "https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"},
+                {name:"Python" ,badgeSrc: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"},
+
+
+            ]}
             color="yellow"
+            imageList={[
+
+                "/award3.png",
+                "/award4.jpg",
+
+            ]}
           >
             <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2">Eye-Tracking Automated Korean Language Question Program Using Furiosa AI NPU, &ldquo;Eying&rdquo;</p>
           </Item>
+            <Item
+                title="영화 아이디어 구축 활용 과제 발굴을 위한 아이디어 공모전"
+                subtitle="장려상, 한국영상자료원"
+                rightContent={{
+                    top: "",
+                    bottom: "2021.08.31"
+                }}
+                techStack={[
+
+                ]}
+                color="yellow"
+                imageList={[
+
+                    "/award5.png",
+
+
+                ]}
+            >
+                <p className="md:block hidden text-gray-700 dark:text-gray-300 mt-2"></p>
+            </Item>
         </Section>
         <Section title="License & Language">
           <Item

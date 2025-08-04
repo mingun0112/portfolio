@@ -28,6 +28,9 @@ export default function Profile() {
                         <Link href="https://github.com/mingun0112" className="text-blue-600 dark:text-blue-400 hover:underline">
                             Github
                         </Link>
+                        <Link href="https://shadowcoding.tistory.com/category" className="text-blue-600 dark:text-blue-400 hover:underline">
+                            Blog
+                        </Link>
                     </div>
                 </div>
             </div>
