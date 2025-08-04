@@ -29,7 +29,7 @@ export default function Home() {
         <Section title="Education">
           <Item
             title="Dankook University"
-            subtitle="Department of Computer Engineering, GPA: 3.56/4.5"
+            subtitle="Department of Computer Engineering, GPA: 3.69/4.5"
             rightContent={{
               top: "Yongin, South Korea",
               bottom: "2019 - Present"
