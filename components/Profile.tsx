@@ -8,7 +8,7 @@ export default function Profile() {
                 <div className="rounded-full overflow-hidden w-32 h-32 md:w-48 md:h-48 relative">
                     <Image
                         className="absolute -top-5 object-cover"
-                        src="/suit.jpeg"
+                        src="/profile_image.jpg"
                         alt="profile image"
                         width={500}
                         height={500}
