@@ -469,9 +469,28 @@ export default function Home() {
                   <div>
                       <h3 className="text-lg font-semibold mb-2">Backend</h3>
                       <div className="flex flex-wrap gap-2">
+
                           <Image
                               src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
                               alt="Flask"
+                              width={100}
+                              height={20}
+                              className="h-5 w-auto"
+                              style={{ width: 'auto' }}
+                              unoptimized
+                          />
+                          <Image
+                              src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"
+                              alt="c++"
+                              width={100}
+                              height={20}
+                              className="h-5 w-auto"
+                              style={{ width: 'auto' }}
+                              unoptimized
+                          />
+                          <Image
+                              src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"
+                              alt="dotnet#"
                               width={100}
                               height={20}
                               className="h-5 w-auto"
