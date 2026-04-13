@@ -239,6 +239,43 @@ export default function Home() {
           </Section>
 
         <Section title="Projects">
+            <Item
+                title="IMIS"
+                subtitle="스마트태그, SCADA 연동 스마트팩토리 MES 개발 프로젝트"
+                rightContent={{ top: "HYUNDAI AUTOEVER SW SCHOOL", bottom: "2025.03 - 2025.07" }}
+                color="blue"
+                imageList={[
+                    "/unoffi1.png",
+                    "/unoffi2.jpeg",
+                ]}
+                techStack={[
+                    {name: "Spring Boot", badgeSrc: "https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=pytorch&logoColor=white"},
+                    {name:"Next" ,badgeSrc: "https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"},
+                    {name:"postgresql", badgeSrc:"https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white"},
+                    {name:"docker", badgeSrc:"https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white"},
+                ]}
+                modalContent={{
+                    description: `스마트팩토리 환경에서 제조 실행 시스템(MES)을 개발한 프로젝트입니다.
+        SCADA 시스템과 연동하여 실시간 생산 데이터를 수집하고 분석합니다.`,
+                    features: [
+                        "실시간 생산 모니터링 및 데이터 수집",
+                        "SCADA 시스템과의 양방향 통신",
+                        "스마트태그 기반 자재 추적 시스템",
+                        "생산 계획 및 스케줄링 관리",
+                        "품질 관리 및 불량 분석"
+                    ],
+                    pptUrl: "https://docs.google.com/presentation/d/e/2PACX-1vT-WU52vYLyGQCCpXiWs8tZpwFpYi92N8O9Bk_-iFNDDPKeIul51ufwdcXohLx4rA/pubembed?start=false&loop=false&delayms=3000",
+                    detailedImages: [
+                        "/detail1.png",
+                        "/detail2.png",
+                        "/detail3.png",
+                    ]
+                }}
+            >
+                <p className="text-sm mt-2">
+                    SCADA 연동 스마트팩토리 MES 시스템
+                </p>
+            </Item>
 
           <Item
               title="UnoffiMap"
@@ -258,6 +295,23 @@ export default function Home() {
 
               ]
               }
+              modalContent={{
+                  description: `스마트팩토리 환경에서 제조 실행 시스템(MES)을 개발한 프로젝트입니다.
+        SCADA 시스템과 연동하여 실시간 생산 데이터를 수집하고 분석합니다.`,
+                  features: [
+                      "실시간 생산 모니터링 및 데이터 수집",
+                      "SCADA 시스템과의 양방향 통신",
+                      "스마트태그 기반 자재 추적 시스템",
+                      "생산 계획 및 스케줄링 관리",
+                      "품질 관리 및 불량 분석"
+                  ],
+                  pptUrl: "https://docs.google.com/presentation/d/e/2PACX-1vQXd42v-Si0LuTR2b6vpwrXe6IlAJkvRiEaBL2yT5skdZiyFOWYsSw3Q4citObPCQ/pubembed?start=false&loop=false&delayms=3000",
+                  detailedImages: [
+                      "/detail1.png",
+                      "/detail2.png",
+                      "/detail3.png",
+                  ]
+              }}
           >
             <p className="text-sm mt-2 ">
 
