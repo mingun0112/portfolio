@@ -29,15 +29,15 @@ interface ItemProps {
 }
 
 export default function Item({
-                                 title,
-                                 subtitle,
-                                 rightContent,
-                                 color,
-                                 imageList,
-                                 techStack,
-                                 children,
-                                 modalContent,
-                             }: ItemProps) {
+    title,
+    subtitle,
+    rightContent,
+    color,
+    imageList,
+    techStack,
+    children,
+    modalContent,
+}: ItemProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const borderColorClass = {
@@ -105,6 +105,7 @@ export default function Item({
                             {imageList.map((src, index) => (
                                 <a
                                     href={src}
+                                    data-src={src} /* 이 부분을 추가합니다 */
                                     key={index}
                                     className="min-w-[300px] aspect-video relative rounded-lg overflow-hidden shadow-md block"
                                 >
@@ -216,6 +217,7 @@ export default function Item({
                                             {modalContent.detailedImages.map((src, index) => (
                                                 <a
                                                     href={src}
+                                                    data-src={src}
                                                     key={index}
                                                     className="aspect-video relative rounded-lg overflow-hidden shadow-md block"
                                                 >
