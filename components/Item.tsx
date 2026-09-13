@@ -5,28 +5,33 @@ import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
+import type { DescriptionLine, ItemColor, ModalContent, RightContent } from "@/data/portfolio";
 
 interface ItemProps {
     title: string;
     subtitle: string;
-    rightContent: {
-        top: string;
-        bottom: string;
-    };
-    color: "blue" | "green" | "yellow" | "purple" | "red";
+    rightContent: RightContent;
+    color: ItemColor;
     imageList?: string[];
-    techStack?: {
-        name: string;
-        badgeSrc: string;
-    }[];
+    techStack?: string[];
+    description?: (string | DescriptionLine)[];
     children?: React.ReactNode;
-    modalContent?: {
-        description?: string;
-        features?: string[];
-        pptUrl?: string;
-        detailedImages?: string[];
-    };
+    modalContent?: ModalContent;
 }
+
+const dotColorClass: Record<ItemColor, string> = {
+    blue: "bg-blue-500",
+    green: "bg-green-500",
+    yellow: "bg-yellow-500",
+    purple: "bg-purple-500",
+    red: "bg-red-400",
+};
+
+const descriptionVisibilityClass: Record<NonNullable<DescriptionLine["visibility"]>, string> = {
+    all: "",
+    "mobile-only": "md:hidden block",
+    "desktop-only": "md:block hidden",
+};
 
 export default function Item({
     title,
@@ -35,107 +40,117 @@ export default function Item({
     color,
     imageList,
     techStack,
+    description,
     children,
     modalContent,
 }: ItemProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const borderColorClass = {
-        blue: "border-blue-500",
-        green: "border-green-500",
-        yellow: "border-yellow-500",
-        purple: "border-purple-500",
-        red: "border-red-300",
-    }[color];
-
     return (
         <>
-            <div
-                className={`border-l-4 ${borderColorClass} pl-4 p-4 rounded-lg md:rounded-none transition-colors`}
-            >
-                <div className="flex justify-between items-start">
-                    <div>
-                        <div className="flex items-center gap-2">
-                            <h3 className="text-sm md:text-lg lg:text-xl font-semibold">
-                                {title}
-                            </h3>
+            <div className="py-6 first:pt-0 border-b border-border last:border-0 md:grid md:grid-cols-[130px_1fr] md:gap-6">
+                <div className="mb-2 md:mb-0 md:pt-1">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                        {rightContent.bottom}
+                    </p>
+                    {rightContent.top && (
+                        <p className="text-xs text-muted-foreground/70 mt-0.5">{rightContent.top}</p>
+                    )}
+                </div>
+
+                <div className="flex items-start gap-3">
+                    <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${dotColorClass[color]}`} />
+                    <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                            <h3 className="font-semibold text-foreground leading-snug">{title}</h3>
                             {modalContent && (
                                 <button
                                     onClick={() => setIsModalOpen(true)}
-                                    className="bg-gray-400 hover:bg-gray-500 text-white px-2 py-1 rounded text-xs font-medium transition-colors"
+                                    className="text-xs font-medium text-muted-foreground underline underline-offset-4 decoration-muted-foreground/50 transition-colors hover:text-foreground"
                                 >
-                                    상세보기
+                                    자세히 보기
                                 </button>
                             )}
                         </div>
-                        <p className="text-xs md:text-sm lg:text-base">
-                            {subtitle}
-                        </p>
-                    </div>
-                    <div className="hidden md:block md:text-right">
-                        <p>{rightContent.top}</p>
-                        <p className="text-sm">{rightContent.bottom}</p>
+                        {subtitle && <p className="text-sm text-muted-foreground mt-0.5">{subtitle}</p>}
+
+                        {description && description.length > 0 && (
+                            <div className="mt-3 space-y-1.5">
+                                {description.map((line, index) => {
+                                    const { text, visibility = "all" } =
+                                        typeof line === "string" ? { text: line } : line;
+                                    if (!text) return null;
+                                    return (
+                                        <p
+                                            key={index}
+                                            className={`text-sm text-foreground/80 leading-relaxed ${descriptionVisibilityClass[visibility]}`}
+                                        >
+                                            {text}
+                                        </p>
+                                    );
+                                })}
+                            </div>
+                        )}
+
+                        {children && <div className="mt-3">{children}</div>}
+
                         {techStack && techStack.length > 0 && (
-                            <div className="mt-2 flex flex-wrap justify-end gap-2">
-                                {techStack.map(({ name, badgeSrc }, i) => (
-                                    <Image
-                                        key={i}
-                                        src={badgeSrc}
-                                        alt={`${name} badge`}
-                                        width={100}
-                                        height={20}
-                                        className="h-5 w-auto"
-                                        unoptimized
-                                    />
+                            <div className="mt-3 flex flex-wrap gap-1.5">
+                                {techStack.map((name) => (
+                                    <span
+                                        key={name}
+                                        className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground"
+                                    >
+                                        {name}
+                                    </span>
                                 ))}
+                            </div>
+                        )}
+
+                        {imageList && imageList.length > 0 && (
+                            <div className="mt-4">
+                                <LightGallery
+                                    speed={500}
+                                    plugins={[lgZoom]}
+                                    elementClassNames="flex gap-3 overflow-x-auto"
+                                >
+                                    {imageList.map((src, index) => (
+                                        <a
+                                            href={src}
+                                            data-src={src}
+                                            key={index}
+                                            className="block min-w-[260px] aspect-video relative overflow-hidden rounded-lg shadow-sm"
+                                        >
+                                            <Image
+                                                src={src}
+                                                alt={`Preview ${index + 1}`}
+                                                fill
+                                                className="object-cover"
+                                                sizes="260px"
+                                            />
+                                        </a>
+                                    ))}
+                                </LightGallery>
                             </div>
                         )}
                     </div>
                 </div>
-
-                {children && <div className="mt-4">{children}</div>}
-
-                {imageList && imageList.length > 0 && (
-                    <div className="mt-4">
-                        <LightGallery
-                            speed={500}
-                            plugins={[lgZoom]}
-                            elementClassNames="flex gap-4 overflow-x-auto"
-                        >
-                            {imageList.map((src, index) => (
-                                <a
-                                    href={src}
-                                    data-src={src} /* 이 부분을 추가합니다 */
-                                    key={index}
-                                    className="min-w-[300px] aspect-video relative rounded-lg overflow-hidden shadow-md block"
-                                >
-                                    <Image
-                                        src={src}
-                                        alt={`Preview ${index + 1}`}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </a>
-                            ))}
-                        </LightGallery>
-                    </div>
-                )}
             </div>
 
             {isModalOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+                    className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
                     onClick={() => setIsModalOpen(false)}
                 >
                     <div
-                        className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                        className="bg-card text-card-foreground rounded-xl border border-border max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
-                            <h2 className="text-2xl font-bold">{title}</h2>
+                        <div className="sticky top-0 bg-card border-b border-border p-6 flex justify-between items-center">
+                            <h2 className="text-xl font-bold">{title}</h2>
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 text-2xl"
+                                className="text-muted-foreground hover:text-foreground text-2xl leading-none"
                             >
                                 ×
                             </button>
@@ -143,27 +158,28 @@ export default function Item({
 
                         <div className="p-6">
                             <div className="mb-6">
-                                <h3 className="text-lg font-semibold mb-2">프로젝트 정보</h3>
-                                <p className="text-gray-600 dark:text-gray-400">{subtitle}</p>
-                                <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-                                    {rightContent.top} | {rightContent.bottom}
+                                <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                    프로젝트 정보
+                                </h3>
+                                <p className="text-foreground/80">{subtitle}</p>
+                                <p className="text-sm text-muted-foreground mt-1">
+                                    {rightContent.top} {rightContent.top && "|"} {rightContent.bottom}
                                 </p>
                             </div>
 
                             {techStack && techStack.length > 0 && (
                                 <div className="mb-6">
-                                    <h3 className="text-lg font-semibold mb-2">기술 스택</h3>
-                                    <div className="flex flex-wrap gap-2">
-                                        {techStack.map(({ name, badgeSrc }, i) => (
-                                            <Image
-                                                key={i}
-                                                src={badgeSrc}
-                                                alt={`${name} badge`}
-                                                width={120}
-                                                height={24}
-                                                className="h-6 w-auto"
-                                                unoptimized
-                                            />
+                                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                        기술 스택
+                                    </h3>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {techStack.map((name) => (
+                                            <span
+                                                key={name}
+                                                className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground"
+                                            >
+                                                {name}
+                                            </span>
                                         ))}
                                     </div>
                                 </div>
@@ -171,8 +187,10 @@ export default function Item({
 
                             {modalContent?.description && (
                                 <div className="mb-6">
-                                    <h3 className="text-lg font-semibold mb-2">프로젝트 설명</h3>
-                                    <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                        프로젝트 설명
+                                    </h3>
+                                    <p className="text-foreground/80 whitespace-pre-line leading-relaxed">
                                         {modalContent.description}
                                     </p>
                                 </div>
@@ -180,16 +198,14 @@ export default function Item({
 
                             {modalContent?.features && modalContent.features.length > 0 && (
                                 <div className="mb-6">
-                                    <h3 className="text-lg font-semibold mb-2">주요 기능</h3>
+                                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                        주요 기능
+                                    </h3>
                                     <ul className="space-y-2">
                                         {modalContent.features.map((feature, index) => (
-                                            <li
-                                                key={index}
-                                                className="text-gray-700 dark:text-gray-300 flex items-start"
-                                            >
-                                                <span className={`${borderColorClass} border-l-2 pl-2`}>
-                                                    {feature}
-                                                </span>
+                                            <li key={index} className="text-foreground/80 flex items-start gap-2">
+                                                <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${dotColorClass[color]}`} />
+                                                {feature}
                                             </li>
                                         ))}
                                     </ul>
@@ -198,38 +214,44 @@ export default function Item({
 
                             {modalContent?.pptUrl && (
                                 <div className="mb-6">
-                                    <h3 className="text-lg font-semibold mb-2">발표 자료</h3>
+                                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                        발표 자료
+                                    </h3>
                                     <iframe
                                         src={modalContent.pptUrl}
-                                        className="w-full h-96 border rounded-lg"
+                                        className="w-full h-96 border border-border rounded-lg"
                                         title="프로젝트 발표 자료"
                                         allowFullScreen={true}
-
                                     />
                                 </div>
                             )}
 
                             {modalContent?.detailedImages && modalContent.detailedImages.length > 0 && (
                                 <div className="mb-6">
-                                    <h3 className="text-lg font-semibold mb-2">상세 이미지</h3>
-                                    <LightGallery speed={500} plugins={[lgZoom]}>
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            {modalContent.detailedImages.map((src, index) => (
-                                                <a
-                                                    href={src}
-                                                    data-src={src}
-                                                    key={index}
-                                                    className="aspect-video relative rounded-lg overflow-hidden shadow-md block"
-                                                >
-                                                    <Image
-                                                        src={src}
-                                                        alt={`Detail ${index + 1}`}
-                                                        fill
-                                                        className="object-cover"
-                                                    />
-                                                </a>
-                                            ))}
-                                        </div>
+                                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                                        상세 이미지
+                                    </h3>
+                                    <LightGallery
+                                        speed={500}
+                                        plugins={[lgZoom]}
+                                        elementClassNames="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                    >
+                                        {modalContent.detailedImages.map((src, index) => (
+                                            <a
+                                                href={src}
+                                                data-src={src}
+                                                key={index}
+                                                className="aspect-video relative rounded-lg overflow-hidden shadow-sm block"
+                                            >
+                                                <Image
+                                                    src={src}
+                                                    alt={`Detail ${index + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                                />
+                                            </a>
+                                        ))}
                                     </LightGallery>
                                 </div>
                             )}
